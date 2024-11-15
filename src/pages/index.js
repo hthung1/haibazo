@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
