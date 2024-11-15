@@ -76,3 +76,51 @@
 .circleText {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .gameBoard {
+    width: 100%;
+  }
+
+  .circle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .formItem label {
+    width: 80px;
+  }
+
+  .input {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .button {
+    padding: 5px 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameBoard {
+    width: 100%;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .formItem label {
+    width: 70px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .button {
+    padding: 5px 15px;
+  }
+}

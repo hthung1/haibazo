@@ -18,6 +18,9 @@ export default function Home() {
   const [lastSelected, setLastSelected] = useState(0);
   const [autoPlay, setAutoPlay] = useState(false);
   const [statusGame, setStatusGame] = useState(0);
+  const [width, setWidth] = useState(500);
+  const [height, setHeight] = useState(500);
+
 
   const playGame = () => {
     setGameStarted(true);
@@ -26,11 +29,17 @@ export default function Home() {
 
   const restartGame = () => {
     const newCircles = [];
-    const maxWidth = 500;
-    const maxHeight = 500;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const responsiveWidth = Math.min(screenWidth - 20, 500);
+    const responsiveHeight = Math.min(screenHeight - 100, 500);
+
+    setWidth(responsiveWidth);
+    setHeight(responsiveHeight);
+
 
     for (let i = 1; i <= number; i++) {
-      const { x, y } = getRandomPosition(maxWidth, maxHeight);
+      const { x, y } = getRandomPosition(width, height);
       newCircles.push({ id: i, x, y, opacity: 1, time: 3, fading: false });
     }
     setStatusGame(0);
